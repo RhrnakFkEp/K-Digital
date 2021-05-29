@@ -1,0 +1,38 @@
+원 핫 인코딩
+하나만 1. 특정 행의 한 데이터만 1.
+
+과적합. overfit.
+같은 개념임에도 불구하고, 한 모델에서는 완벽하게 분석하지만, 다른 모델에서는 분석을 하지 못하는 것.
+
+tensor : 2차원이상의 행렬
+flow : 흐름
+2차원 이상의 행렬 흐름. 
+tensorflow
+
+Dense : 밀집
+Dense(30, input_dim=17, activation='relu')
+입력 17, dense(hidden) 30. 
+입력과 덴스는 서로 연결 되어있음.
+17개가 각각의 30개와 연결. 
+activation : 렐루, 시그모이드. 어떤함수형태로 결과를 낼건지?인듯?
+
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
+model.fit (원본데이터X, 결과값y, epochs:몇번학습, batch_size=10)
+학습의 양을 조절. 1묶음씩? 10묶음씩?
+
+loss : 빗나간 정도
+accuracy : 예측 성공 확률. 1.0이면 100% 맞춤.
+
+numpy : 수치분석 라이브러리. 
+
+X : 속성. attribute
+y : class
+
+Sequential : 순차적으로
+add : 속성추가. 한 층 분석. 추가로 add를 주면 층이 증가. 
+activation : 판단 종류. 다음층으로 어떻게 값넘기는지? 시그모이드 단점이 있어서 렐루 다음에 사용함.? 개발자의 판단에 의해 결정하나봄.?
+compile : 컴파일
+loss 오차값 추적.
+optimizer. 아담을 많이 사용.
+
+블랙박스 : 은닉층.

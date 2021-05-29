@@ -1,0 +1,132 @@
+어떤 코드를 설계한건지, 작성일자가 언젠지, 작성자가 누군지 적어야함.
+설계도 : 변수 명같은거 적어놔야함
+
+csv :콤마 세퍼레이트 벨류의 약자.
+콤마로 구분되는 값.
+
+xml :익스텐즈 마컴? 랭귀지. 
+
+json : javascript(웹에서 작동. 자동화할수있음. 실시간으로 움직인다던가하는거)가 json임.
+java script object(객체, 물체) notation. 
+
+자바. 커피. 인도네시아.
+커피콩을 그냥 그대로 가져오니 썩어서 먹을 수 없었음.
+커피콩을 빻아서 가져오기로함.
+빻는 행동을 각각의 섬에서 함(각각의 객체가 됨)
+빻아서 모아 배로 가져옴(메인에 객체를 올림)
+이게 객체지향언어. 자바의 어원임.
+
+객체. 즉, 한가지 기능. 냉장고, 세탁기 등을 하나 표현.
+각각 구현한것들을 하나로 모아 사용하는게 객체지향언어의 핵심.
+
+---------------------
+2
+
+유튜브 크롤링
+
+기초 도메인(해당 분야. 구역. 컴퓨터에서 말하는 그 도메인이 아님.) 지식
+크롤링 : 웹페이지로부터 원하는 데이터를 추출
+URL  : Uniform Resource Locator. 네트워크 상에서 자원이 어디있는지를 알려주기 위한 규약. 
+	- 유니폼. 인터넷 상의 단 하나의 주소를 가르킴. 해당 주소만 가지고 있으면 어디든 접속가능. 
+
+유튜브크롤링
+	- 동영상, 댓글
+	- 영상에 대한 긍정,부정 분류. 분석
+	- 동영상 URL은 따로 있음. 동영상 우클릭. 동영상 URL 복사. 
+	ex) 주소표시줄 URL
+		https://www.youtube.com/watch?v=ZuWR1rjHk_8&t=100s
+	t : 초. 100초에 해당하는 시간을 가져옴
+	1s : 1초부터 시작. 
+	200s : 3분 20초부터 시작.
+	동영상 URL
+	https://youtu.be/ZuWR1rjHk_8
+	이 동영상 OR 채널의 ID(그걸 구분할수있는 유일한 구분자) : ZuWR1rjHk_8
+
+API : Applicataion Programming Interface.  앱을 만들기 위해 참고할 수 있는 사이트(sight. 인터페이스: inter, face)
+
+pytube 패키지
+YouTube 비디오 다운을 위한 가볍고(빠른) 종속성(어딘가에 얽매임) 없는 라이브러리(즉, 하나를 설치하면, 다른 라이브러리도 설치해야함이 없다는 뜻)
+단일 패키지. 해당패키지만 있으면 된다는 뜻.
+
+크롤링은 앵간하면 코랩같은곳보다는 주피터나 파이참같은 로컬에서 실행하는게 좋음. 코랩에서는 크롤링이 별로 안좋다함. 난또 저작권인줄 
+
+
+yt.streams
+리스트 형태로 되어있음.
+[<Stream: itag="18" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.42001E" acodec="mp4a.40.2" progressive="True" type="video">, 
+<Stream: itag="137" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="avc1.640028" progressive="False" type="video">, 
+<Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">, 
+<Stream: itag="136" mime_type="video/mp4" res="720p" fps="24fps" vcodec="avc1.4d401f" progressive="False" type="video">, 
+<Stream: itag="247" mime_type="video/webm" res="720p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="398" mime_type="video/mp4" res="720p" fps="24fps" vcodec="av01.0.05M.08" progressive="False" type="video">, 
+<Stream: itag="135" mime_type="video/mp4" res="480p" fps="24fps" vcodec="avc1.4d401e" progressive="False" type="video">, 
+<Stream: itag="244" mime_type="video/webm" res="480p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="397" mime_type="video/mp4" res="480p" fps="24fps" vcodec="av01.0.04M.08" progressive="False" type="video">, 
+<Stream: itag="134" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.4d401e" progressive="False" type="video">, 
+<Stream: itag="243" mime_type="video/webm" res="360p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="396" mime_type="video/mp4" res="360p" fps="24fps" vcodec="av01.0.01M.08" progressive="False" type="video">, 
+<Stream: itag="133" mime_type="video/mp4" res="240p" fps="24fps" vcodec="avc1.4d4015" progressive="False" type="video">, 
+<Stream: itag="242" mime_type="video/webm" res="240p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="395" mime_type="video/mp4" res="240p" fps="24fps" vcodec="av01.0.00M.08" progressive="False" type="video">, 
+<Stream: itag="160" mime_type="video/mp4" res="144p" fps="24fps" vcodec="avc1.4d400c" progressive="False" type="video">, 
+<Stream: itag="278" mime_type="video/webm" res="144p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="394" mime_type="video/mp4" res="144p" fps="24fps" vcodec="av01.0.00M.08" progressive="False" type="video">, 
+<Stream: itag="140" mime_type="audio/mp4" abr="128kbps" acodec="mp4a.40.2" progressive="False" type="audio">, 
+<Stream: itag="249" mime_type="audio/webm" abr="50kbps" acodec="opus" progressive="False" type="audio">, 
+<Stream: itag="250" mime_type="audio/webm" abr="70kbps" acodec="opus" progressive="False" type="audio">, 
+<Stream: itag="251" mime_type="audio/webm" abr="160kbps" acodec="opus" progressive="False" type="audio">]
+
+itag : 태그(위치), id의 역할(다른 영상과 구분하는 구분자 역할)
+mime_type : 확장자. 동영상 타입. mp4, webm, avi 등
+res : resolution의 약자. 해상도. 144, 260, 360, ... , 1080
+fps : frame per second(초당 프레임 개수) 프레임 : 액자(장면). ex) 24fps : 초당 24 장면이 지나감
+vcodec : 비디오 코덱. 너무 많아서 설명하기 힘듦
+acodec : 오디오 코덱
+progressive : 진보된. 화질개선에 해당. True, False값이 주어짐. 144p에서 p에 해당. progressive를 할건지말건지.
+type : 타입. 비디오/오디오
+
+
+filter : ---------------------
+[<Stream: itag="18" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.42001E" acodec="mp4a.40.2" progressive="True" type="video">]
+
+order_by (resolution) -----------
+[<Stream: itag="160" mime_type="video/mp4" res="144p" fps="24fps" vcodec="avc1.4d400c" progressive="False" type="video">, 
+<Stream: itag="278" mime_type="video/webm" res="144p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="394" mime_type="video/mp4" res="144p" fps="24fps" vcodec="av01.0.00M.08" progressive="False" type="video">, 
+<Stream: itag="133" mime_type="video/mp4" res="240p" fps="24fps" vcodec="avc1.4d4015" progressive="False" type="video">, 
+<Stream: itag="242" mime_type="video/webm" res="240p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="395" mime_type="video/mp4" res="240p" fps="24fps" vcodec="av01.0.00M.08" progressive="False" type="video">, 
+<Stream: itag="18" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.42001E" acodec="mp4a.40.2" progressive="True" type="video">, 
+<Stream: itag="134" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.4d401e" progressive="False" type="video">, 
+<Stream: itag="243" mime_type="video/webm" res="360p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="396" mime_type="video/mp4" res="360p" fps="24fps" vcodec="av01.0.01M.08" progressive="False" type="video">, 
+<Stream: itag="135" mime_type="video/mp4" res="480p" fps="24fps" vcodec="avc1.4d401e" progressive="False" type="video">, 
+<Stream: itag="244" mime_type="video/webm" res="480p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="397" mime_type="video/mp4" res="480p" fps="24fps" vcodec="av01.0.04M.08" progressive="False" type="video">, 
+<Stream: itag="136" mime_type="video/mp4" res="720p" fps="24fps" vcodec="avc1.4d401f" progressive="False" type="video">, 
+<Stream: itag="247" mime_type="video/webm" res="720p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="398" mime_type="video/mp4" res="720p" fps="24fps" vcodec="av01.0.05M.08" progressive="False" type="video">, 
+<Stream: itag="137" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="avc1.640028" progressive="False" type="video">, 
+<Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">]
+
+res기준 오름차순. 작은것부터 큰순서대로.
+
+order_by('resolution').desc() : 내림차순. 큰값부터 작은값순.-----------------------------
+[<Stream: itag="399" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="av01.0.08M.08" progressive="False" type="video">, 
+<Stream: itag="137" mime_type="video/mp4" res="1080p" fps="24fps" vcodec="avc1.640028" progressive="False" type="video">, 
+<Stream: itag="398" mime_type="video/mp4" res="720p" fps="24fps" vcodec="av01.0.05M.08" progressive="False" type="video">, 
+<Stream: itag="247" mime_type="video/webm" res="720p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="136" mime_type="video/mp4" res="720p" fps="24fps" vcodec="avc1.4d401f" progressive="False" type="video">, 
+<Stream: itag="397" mime_type="video/mp4" res="480p" fps="24fps" vcodec="av01.0.04M.08" progressive="False" type="video">, 
+<Stream: itag="244" mime_type="video/webm" res="480p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="135" mime_type="video/mp4" res="480p" fps="24fps" vcodec="avc1.4d401e" progressive="False" type="video">, 
+<Stream: itag="396" mime_type="video/mp4" res="360p" fps="24fps" vcodec="av01.0.01M.08" progressive="False" type="video">, 
+<Stream: itag="243" mime_type="video/webm" res="360p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="134" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.4d401e" progressive="False" type="video">, 
+<Stream: itag="18" mime_type="video/mp4" res="360p" fps="24fps" vcodec="avc1.42001E" acodec="mp4a.40.2" progressive="True" type="video">, 
+<Stream: itag="395" mime_type="video/mp4" res="240p" fps="24fps" vcodec="av01.0.00M.08" progressive="False" type="video">, 
+<Stream: itag="242" mime_type="video/webm" res="240p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="133" mime_type="video/mp4" res="240p" fps="24fps" vcodec="avc1.4d4015" progressive="False" type="video">, 
+<Stream: itag="394" mime_type="video/mp4" res="144p" fps="24fps" vcodec="av01.0.00M.08" progressive="False" type="video">, 
+<Stream: itag="278" mime_type="video/webm" res="144p" fps="24fps" vcodec="vp9" progressive="False" type="video">, 
+<Stream: itag="160" mime_type="video/mp4" res="144p" fps="24fps" vcodec="avc1.4d400c" progressive="False" type="video">]

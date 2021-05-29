@@ -1,0 +1,8 @@
+# News Sum ver.1
+
+용량이 너무 커서 깃허브에 커밋 불가능함 
+용량을 줄이고, 압축해서 새로 ver 2를 만들어야 할듯
+우선은 .ipynb(노트북파일)  파일만 커밋함
+
+textSummary_tf-idf 노트북 파일은 tf-idf 만을 이용하여 텍스트를 요약하도록 한것이고,
+textSummary 노트북 파일은 textRank 알고리즘을 이용하여 텍스트를 요약하도록 한 것임
